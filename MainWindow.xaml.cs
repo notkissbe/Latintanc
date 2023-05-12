@@ -28,6 +28,8 @@ namespace Latintanc
             f.Beolvasas();
             kiir();
             Masodik();
+            Harmadik();
+            Negyedik();
 
         }
 
@@ -44,6 +46,19 @@ namespace Latintanc
         private void Masodik()
         {
             masodik.Text = f.Masodik();
+        }
+        private void Harmadik()
+        {
+            harmadik.Text = f.Harmadik().ToString(); 
+        }
+        private void Negyedik()
+        {
+            string s = "";
+            foreach (var item in f.Negyedik())
+            {
+                s += item + " ";
+            }
+            negyedik.Text = s;
         }
     }
 }

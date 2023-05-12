@@ -28,14 +28,37 @@ namespace Latintanc
         }
 
         public string Masodik()
-		{
-            
+        {
+
             return $"Elso tanc: {lista[0].Tanctipus}, Utolso tanc: {lista.Last().Tanctipus}";
 
-		}
-        public string Harmadik()
-		{
-            
-		}
+        }
+        public int Harmadik()
+        {
+            int szamlalo = 0;
+            foreach (var valami in lista)
+            {
+                if (valami.Tanctipus == "samba")
+                {
+                    szamlalo++;
+                }
+            }
+            return szamlalo;
+        }
+
+        public List<string> Negyedik()
+        {
+            List<string> tancoltbenne = new List<string>();
+            foreach (var valami in lista)
+            {
+                if (valami.Nonev == "Vilma")
+                {
+                    tancoltbenne.Add(valami.Tanctipus);
+
+                }
+            }
+            return tancoltbenne;
+
+        }
     }
 }
